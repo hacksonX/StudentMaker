@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="sendAndReceive">
+  <DataContextMoniker Name="/sendAndReceiveDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4ae43ea2-3577-490e-8272-e214454817ea" absoluteBounds="2, 1.25, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/sendAndReceiveDataContext/userDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adeb8c92-112f-4b73-bf4e-873470009e15" absoluteBounds="2.015, 1.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe6df9ff-02de-4259-8a7b-1e42b87586ff" absoluteBounds="5.125, 1.5, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/sendAndReceiveDataContext/studentResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fbac6d1-aae5-4970-8d1b-b7b0911ac6f0" absoluteBounds="5.14, 1.96, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 2.83735270182292); (5.125 : 2.83735270182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sendAndReceiveDataContext/userDetail/userDetail_studentResult" />
+      <nodes>
+        <classShapeMoniker Id="4ae43ea2-3577-490e-8272-e214454817ea" />
+        <classShapeMoniker Id="fe6df9ff-02de-4259-8a7b-1e42b87586ff" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

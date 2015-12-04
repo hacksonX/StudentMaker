@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SchoolAppForm" Class="sendAndReceiveDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=Family-PC\;Initial Catalog=SchoolAppForm;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SchoolAppFormConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.userDetails" Member="userDetails">
+    <Type Name="userDetail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="surname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idNumber" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="passportNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="addressLine1" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="addressLine2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="postCode" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="cellphoneNumber" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="emailAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="userDetail_studentResult" Member="studentResults" ThisKey="id" OtherKey="myID" Type="studentResult" />
+    </Type>
+  </Table>
+  <Table Name="dbo.studentResults" Member="studentResults">
+    <Type Name="studentResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="myID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="englishFLMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="endlishFALMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="endlish2ndLMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mathematicsMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mathsLiteracyMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vernercularFLMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vernecularFALMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vernecular2ndLMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lifeOrientationMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lifeSciencesMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="geographyMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="physicalSciencesMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="accountingMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="businessStudiesMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="economicsMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="historyMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tourismMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="userDetail_studentResult" Member="userDetail" ThisKey="myID" OtherKey="id" Type="userDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
